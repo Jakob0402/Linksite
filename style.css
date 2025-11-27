@@ -1,0 +1,99 @@
+/* Grundlegende Resets und Typografie */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background-color: #0f3460;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    border: 3px solid #e94560;
+}
+
+h1 {
+    font-weight: 600;
+    color: #e94560;
+}
+
+/* Der Container für die Links */
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Eine Spalte auf kleinen Bildschirmen */
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Die einzelnen Link-Karten (Glassmorphism Stil) */
+.link-card {
+    background: rgba(255, 255, 255, 0.05); /* Transparenter Hintergrund */
+    backdrop-filter: blur(10px); /* Der "Glass" Effekt */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    padding: 25px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.link-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #e94560;
+}
+
+.link-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.link-card .url {
+    font-size: 0.8rem;
+    color: #0f3460;
+    background-color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #5a5a7a;
+}
+
+/* Media Query für größere Bildschirme (Desktop) */
+@media (min-width: 600px) {
+    .link-grid {
+        grid-template-columns: 1fr 1fr; /* Zwei Spalten nebeneinander */
+    }
+}
